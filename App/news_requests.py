@@ -8,7 +8,7 @@ Sources = news.Sources
 
 def get_sources(category):
     """
-    function gets response from the api call
+    function that gets response from the api call
     """
     api_key = app.config['API_KEY']
 

@@ -1,6 +1,21 @@
+class Articles:
+    """ 
+    Articles class to define Article Objects
+    
+    """
+    def __init__(self, source, author, title, description, url, image_url, publish_time):
+
+        self.source = source
+        self.author = author
+        self.title = title
+        self.description = description
+        self.url = url
+        self.image_url = image_url
+        self.publish_time = publish_time
+        
 def class Sources:
     '''
-    Sources class defines each source object
+    Sources class that defines each source object
     '''
     def __init__(self,id,name,description,url,category,language,country):
         self.id = id
@@ -10,3 +25,4 @@ def class Sources:
         self.category = category
         self.language = language
         self.country = country
+© 2019 GitHub, Inc.

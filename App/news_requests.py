@@ -43,3 +43,11 @@ def process_new_sources(sources_list):
         sources_outcome.append(new_source)
     
     return sources_outcome
+
+    def get_articles(article):
+    
+    api_key = app.config['API_KEY']
+
+    url = app.config['NEWS_ARTICLES_APL_URL']
+
+    articles_url = url.format(article,api_key)

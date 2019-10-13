@@ -1,21 +1,21 @@
 # Project
 the TRIBUNE
 
-# Author
+## Author
 [Ali Kheir](https://github.com/AliKheirAbdi)
 
 ## Author Contact details
 * Email: akheirali(@)gmail.com
 
 
-# Project Description
-A Flask application that help one list and preview news articles from various sources. 
-This is achieved by using the [News Api](https://newsapi.org/)
+## Project Description
+A Flask application that helps preview news articles from various sources. 
+This is achieved by aggregating news stories and article from various sources using the [News Api](https://newsapi.org/)
 
 ## Screenshot
 ![image](https://github.com/AliKheirAbdi/NewsApp/blob/master/screenshot.png)
 
-# Set up instructions
+## Set up instructions
 1. You need to have python3.7 installed, venv and pip
 2. Set up the virtual environment and activate it.
 
@@ -46,7 +46,7 @@ This is achieved by using the [News Api](https://newsapi.org/)
 9. Followed by ```$ ./start.sh``` command
 10.Launch in the server to view the application
 
-# Development
+## Development
 Want to contribute? Great!
 * Fork the repo
 * Clone the repo in your machine but ensure you have all the necessary modules.(You can find them in the set up instructions above)

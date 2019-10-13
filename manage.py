@@ -1,10 +1,19 @@
 from app import create_app
-from flask_script import Manager, Server
+from flask_script import Manager,Server
 
 app = create_app('development')
 
 manager = Manager(app)
 manager.add_command('server',Server)
 
-if __name__ == "__main__":
-    manager.run() 
+@manager.command
+def test():
+    """
+    run unit tests
+    """
+    import unittest
+    test=unittest.TestLoader().discover('tests')
+    unittest.TestRunner(verbosity=2).run(tests)
+
+if __name__== '__main__':
+    manager.run()

@@ -1,19 +1,28 @@
 import os
-from dotenv import load_dotenv
-load_dotenv()
 
 class Config:
-    API_KEY=os.environ.get("API_KEY")
-    NEWS_API_BASE_URL='https://newsapi.org/v2/sources?country=us&category={}&apiKey={}'
-    NEWS_ARTICLES_APL_URL='https://newsapi.org/v2/everything?q={}&apiKey={}'
+    NEWS_HIGHLIGHT_API_BASE_URL ='https://newsapi.org/v2/sources?&apiKey={}'
+    NEWS_HIGHLIGHT_API_KEY = os.environ.get('NEWS_HIGHLIGHT_API_KEY')
+    SOURCES_URL_KEY = 'https://newsapi.org/v2/sources?={}apiKey={}'
+    TOP_HEADLINES_URL ='https://newsapi.org/v2/top-headlines?sources={}&apiKey={}'
+    EVERYTHING_URL_KEY ='https://newsapi.org/v2/everything?domains=wsj.com,nytimes.com&apiKey={}'
+
 class ProdConfig(Config):
+    '''
+    Production configuration child class
+    Args:
+        Config: the parent class with general configuration settings
+    '''
     pass
 
-
 class DevConfig(Config):
+    '''
+    Development configuration child class
+    '''
     DEBUG = True
+    ENV = 'development'
 
 config_options = {
-'development':DevConfig,
-'production':ProdConfig
+    'development': DevConfig,
+    'production': ProdConfig
 }
